@@ -1,0 +1,63 @@
+// 1. Conditional Statement
+function checkNumber(num) {
+ if (num > 0) {
+ console.log(num + " is Positive");
+ } else if (num < 0) {
+ console.log(num + " is Negative");
+ } else {
+ console.log("Number is Zero");
+ }
+}
+checkNumber(5);
+checkNumber(-2);
+checkNumber(0);
+// 2. Loops
+console.log("Loop Example:");
+for (let i = 1; i <= 5; i++) {
+ console.log("Iteration: " + i);
+}
+// 3. Function
+function add(a, b) {
+ return a + b;
+}
+console.log("Sum of 5 and 10:", add(5, 10));
+// 4. Inheritance (OOP)
+class Person {
+ constructor(name) {
+ this.name = name;
+ }
+ greet() {
+ console.log(`Hello, my name is ${this.name}`);
+ }
+}
+class Student extends Person {
+ constructor(name, subject) {
+ super(name); // calls parent constructor
+ this.subject = subject;
+ }
+ study() {
+ console.log(`${this.name} is studying ${this.subject}`);
+ }
+}
+let student1 = new Student("Pratham", "JavaScript");
+student1.greet();
+student1.study();
+// 5. Iterator
+const numbers = [1, 2, 3];
+const numIterator = numbers[Symbol.iterator]();
+console.log("Iterator Example:");
+console.log(numIterator.next().value); // 1
+console.log(numIterator.next().value); // 2
+console.log(numIterator.next().value); // 3
+console.log(numIterator.next().done); // true
+// 6. Generator
+function* countUpTo(limit) {
+ for (let i = 1; i <= limit; i++) {
+ yield i; // pause and return value
+ }
+}
+console.log("Generator Example:");
+const counter = countUpTo(5);
+for (let num of counter) {
+ console.log(num);
+}

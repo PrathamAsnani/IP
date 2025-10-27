@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multilevel Inheritance</title>
+</head>
+<body>
+    <h2>Multilevel Inheritance in JavaScript</h2>
+    <p id="result"></p>
+
+    <script>
+        // Parent Class
+        class Vehicle {
+            type() {
+                return "This is a vehicle.";
+            }
+        }
+
+        // Child Class (inherits Vehicle)
+        class Car extends Vehicle {
+            brand() {
+                return "Car brand: Tesla";
+            }
+        }
+
+        // Grandchild Class (inherits Car)
+        class Model extends Car {
+            modelName() {
+                return "Model: Tesla Model S";
+            }
+        }
+
+        const myCar = new Model();
+
+        document.getElementById("result").innerHTML =
+            myCar.type() + "<br>" + myCar.brand() + "<br>" + myCar.modelName();
+    </script>
+</body>
+</html>

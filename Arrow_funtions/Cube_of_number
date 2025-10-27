@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h3>Cube using Arrow Function</h3>
+
+  <input type="number" id="num3" placeholder="Enter a number">
+  <button onclick="findCube()">Find Cube</button>
+
+  <p id="result3"></p>
+
+  <script>
+    const cube = num => num ** 3;
+
+    function findCube() {
+      const num = document.getElementById("num3").value;
+      document.getElementById("result3").innerText =
+        `Cube of ${num} is: ${cube(num)}`;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hierarchical Inheritance</title>
+</head>
+<body>
+    <h2>Hierarchical Inheritance in JavaScript</h2>
+    <p id="output"></p>
+
+    <script>
+        // Parent Class
+        class Animal {
+            sound() {
+                return "Animals make sounds.";
+            }
+        }
+
+        // Child Class 1
+        class Dog extends Animal {
+            sound() {
+                return "Dog barks!";
+            }
+        }
+
+        // Child Class 2
+        class Cat extends Animal {
+            sound() {
+                return "Cat meows!";
+            }
+        }
+
+        const d = new Dog();
+        const c = new Cat();
+
+        document.getElementById("output").innerHTML =
+            "Dog: " + d.sound() + "<br>Cat: " + c.sound();
+    </script>
+</body>
+</html>

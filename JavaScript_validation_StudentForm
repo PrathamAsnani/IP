@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Form Validation</title>
+</head>
+<body>
+  <h2>Student Information Form</h2>
+
+  <form onsubmit="return validateStudentForm()">
+    Roll No: <input type="text" id="roll"><br><br>
+    Name: <input type="text" id="name"><br><br>
+    Email: <input type="text" id="email"><br><br>
+    Mobile: <input type="text" id="mobile"><br><br>
+    Age: <input type="number" id="age"><br><br>
+    Hobbies: <input type="text" id="hobbies"><br><br>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    function validateStudentForm() {
+      const roll = document.getElementById("roll").value.trim();
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const mobile = document.getElementById("mobile").value.trim();
+      const age = document.getElementById("age").value;
+      const hobbies = document.getElementById("hobbies").value.trim();
+
+      if (roll === "" || name === "" || email === "" || mobile === "" || age === "" || hobbies === "") {
+        alert("All fields are required!");
+        return false;
+      }
+
+      if (!/^\d+$/.test(roll)) {
+        alert("Roll Number must be numeric!");
+        return false;
+      }
+
+      if (!/^[A-Za-z ]+$/.test(name)) {
+        alert("Name must contain alphabets only!");
+        return false;
+      }
+
+      if (!/^\S+@\S+\.\S+$/.test(email)) {
+        alert("Invalid Email Format!");
+        return false;
+      }
+
+      if (!/^\d{10}$/.test(mobile)) {
+        alert("Mobile number must be 10 digits!");
+        return false;
+      }
+
+      if (age < 3 || age > 25) {
+        alert("Age must be between 3 and 25!");
+        return false;
+      }
+
+      alert("Student Form Submitted Successfully!");
+      return true;
+    }
+  </script>
+</body>
+</html>

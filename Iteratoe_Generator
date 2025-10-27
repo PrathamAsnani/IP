@@ -1,0 +1,31 @@
+// Custom Iterator
+function numbersIterator(arr) {
+  let index = 0;
+  return {
+    next: () => {
+      return index < arr.length
+        ? { value: arr[index++], done: false }
+        : { value: undefined, done: true };
+    }
+  };
+}
+
+const nums = numbersIterator([10, 20, 30]);
+console.log(nums.next()); // { value: 10, done: false }
+console.log(nums.next()); // { value: 20, done: false }
+console.log(nums.next()); // { value: 30, done: false }
+console.log(nums.next()); // { value: undefined, done: true }
+
+
+function* generateNumbers() {
+  yield 10;
+  yield 20;
+  yield 30;
+}
+
+const gen = generateNumbers();
+
+console.log(gen.next()); // { value: 10, done: false }
+console.log(gen.next()); // { value: 20, done: false }
+console.log(gen.next()); // { value: 30, done: false }
+console.log(gen.next()); // { value: undefined, done: true }

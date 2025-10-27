@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF8">
+<meta name="viewport" content="width=devicewidth, initialscale=1.0">
+<title>Arrow Functions, DOM & CSS Manipulation</title>
+<style>
+/ Initial CSS Styling /
+contentBox {
+width: 200px;
+height: 200px;
+backgroundcolor: lightgray;
+display: flex;
+justifycontent: center;
+alignitems: center;
+fontsize: 20px;
+color: 333;
+transition: backgroundcolor 0.3s ease;
+margintop: 20px;
+}
+.highlight {
+backgroundcolor: lightcoral;
+color: white;
+}
+button {
+padding: 10px 20px;
+fontsize: 16px;
+cursor: pointer;
+margintop: 20px;
+border: none;
+backgroundcolor: 27ae60;
+color: white;
+}
+button:hover {
+backgroundcolor: 2ecc71;
+}
+</style>
+</head>
+<body>
+<h2>Arrow Function, DOM & CSS Manipulation Example</h2>
+<div id="contentBox">Original Text</div>
+<button id="changeButton">Click Me</button>
+<script>
+// Arrow function for DOM and CSS Manipulation
+const changeContentAndStyle = () => {
+// DOM Manipulation: Change the text inside the div
+const contentBox = document.getElementById('contentBox');
+contentBox.innerHTML = "Content Changed!";
+// CSS Manipulation: Toggle CSS class to change background color
+contentBox.classList.toggle('highlight');
+};
+// Event listener with an arrow function
+document.getElementById('changeButton').addEventListener('click',
+changeContentAndStyle);
+</script>
+</body>
+</html>

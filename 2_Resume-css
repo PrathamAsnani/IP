@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratham Asnani - Web Developer Resume</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .header-blue-bg {
+            background-color: #0056b3; /* Darker blue for header */
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+            position: relative; /* Needed for absolute positioning of the image */
+        }
+
+        .header-blue-bg h1 {
+            color: white;
+            margin: 0;
+            font-size: 3em; /* Larger name */
+            letter-spacing: 1px;
+        }
+
+        .header-blue-bg p {
+            color: rgba(255, 255, 255, 0.9); /* Slightly muted white for contact info */
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
+
+        .profile-pic-container {
+            position: absolute;
+            top: 20px; /* Adjust as needed */
+            right: 20px; /* Adjust as needed */
+            width: 100px; /* Diameter of the circle */
+            height: 100px; /* Diameter of the circle */
+            border-radius: 50%; /* Makes it a circle */
+            overflow: hidden; /* Hides parts of the image outside the circle */
+            border: 3px solid white; /* White border around the circle */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Shadow for the image */
+        }
+
+        .profile-pic-container img {
+            width: 100%; /* Makes the image fill the container */
+            height: 100%; /* Makes the image fill the container */
+            object-fit: cover; /* Ensures the image covers the area without distortion */
+            display: block; /* Removes extra space below the image */
+        }
+
+        h2, h3, h4 {
+            color: #0056b3; /* Consistent blue for headings */
+            border-bottom: 2px solid #007bff; /* Underline for sections */
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        section {
+            margin: 0 25px 30px 25px; /* Increased margins for better spacing */
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px; /* Slightly more rounded corners */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 25px;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); /* Subtle table shadow */
+        }
+
+        th, td {
+            border: 1px solid #e0e0e0; /* Lighter border for tables */
+            padding: 12px 15px; /* More padding in table cells */
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background-color: #f8f8f8; /* Lighter background for table headers */
+            color: #555;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #fcfcfc; /* Zebra striping for table rows */
+        }
+
+        /* Styling for the Skills and Interests sections */
+        .skills-list, .interests-list {
+            list-style-type: none; /* Remove default bullet points */
+            padding: 0;
+            display: flex; /* Use flexbox for horizontal layout */
+            flex-wrap: wrap; /* Allow items to wrap to the next line */
+            gap: 10px; /* Space between skill/interest items */
+            /* justify-content: center; /* Optionally center if you prefer */
+        }
+
+        .skills-list li, .interests-list li {
+            background-color: #e0f2f7; /* Light blue background for items */
+            padding: 8px 15px;
+            border-radius: 20px; /* Pill-shaped items */
+            font-size: 0.95em;
+            color: #0056b3; /* Darker blue text */
+            border: 1px solid #a7d9ee; /* Subtle border */
+            white-space: nowrap; /* Prevent breaking names */
+            transition: background-color 0.3s ease; /* Smooth hover effect */
+        }
+
+        .skills-list li:hover, .interests-list li:hover {
+            background-color: #cce9f5; /* Slightly darker on hover */
+        }
+
+
+        .marksheet-links-container {
+            text-align: center;
+            padding: 20px 0 40px 0; /* More vertical padding for the button section */
+            margin: 0 25px; /* Align with sections */
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex; /* Use flexbox for horizontal alignment */
+            justify-content: center; /* Center buttons horizontally */
+            gap: 20px; /* Space between buttons */
+            flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+        }
+
+        .marksheet-link a {
+            display: inline-block;
+            padding: 12px 25px; /* Larger padding for buttons */
+            background-color: #007bff; /* Primary button color */
+            color: white;
+            text-decoration: none;
+            border-radius: 6px; /* Slightly more rounded buttons */
+            transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition and slight scale */
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Button shadow */
+        }
+
+        .marksheet-link a:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+            transform: translateY(-2px); /* Slight lift effect on hover */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="header-blue-bg">
+        <div class="profile-pic-container">
+            <img src="logo.png" alt="Pratham Asnani Profile Picture">
+        </div>
+        <h1>Pratham Asnani</h1>
+        <p>pratham@email.com | +91 9876543210</p>
+    </div>
+
+    <section>
+        <h2>Summary</h2>
+        <p>
+            A passionate and detail-oriented Web Developer with a strong foundation in HTML, CSS, JavaScript, and modern frameworks.
+            Skilled at developing responsive websites, collaborating effectively with teams, and continuously learning new technologies.
+            Experienced in working on both front-end and full-stack projects with a focus on clean design, efficient code, and exceptional user experience.
+        </p>
+    </section>
+
+    <section>
+        <h2>Skills</h2>
+        <ul class="skills-list">
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript (ES6+)</li>
+            <li>React.js</li>
+            <li>Node.js</li>
+            <li>Express.js</li>
+            <li>MongoDB</li>
+            <li>RESTful APIs</li>
+            <li>Git & GitHub</li>
+            <li>Responsive Design</li>
+            <li>UI/UX Principles</li>
+            <li>Debugging</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Experience</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Role</th>
+                    <th>Company</th>
+                    <th>Duration</th>
+                    <th>Responsibilities</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Junior Developer (Intern)</td>
+                    <td>Tech Solutions Inc.</td>
+                    <td>May 2025 - Present</td>
+                    <td>
+                        <ul>
+                            <li>Assisted in web development projects using HTML, CSS, and JavaScript.</li>
+                            <li>Collaborated with senior developers to debug and optimize code, improving application performance.</li>
+                            <li>Actively participated in Agile meetings and code reviews, contributing to team efficiency and code quality.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Projects</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Project Name</th>
+                    <th>Technologies Used</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Portfolio Website</td>
+                    <td>HTML, CSS, JavaScript</td>
+                    <td>Designed and developed a personal portfolio website showcasing skills, projects, and contact details. Implemented a responsive layout and engaging animations for enhanced user experience.</td>
+                </tr>
+                <tr>
+                    <td>Task Manager App</td>
+                    <td>React, Node.js, Express, MongoDB</td>
+                    <td>Built a full-stack task management application allowing users to add, update, and delete tasks. Integrated user authentication and developed robust RESTful APIs.</td>
+                </tr>
+                <tr>
+                    <td>Weather Dashboard</td>
+                    <td>JavaScript, OpenWeather API, Bootstrap</td>
+                    <td>Created an interactive weather dashboard utilizing the OpenWeather API. Users can search for cities and view current weather conditions and a multi-day forecast.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Education</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Degree/Certificate</th>
+                    <th>Institution</th>
+                    <th>Years</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Higher Secondary Education</td>
+                    <td>Jai Hind</td>
+                    <td>2020 - 2022</td>
+                    <td>Science stream with Computer Science as a core subject.</td>
+                </tr>
+                <tr>
+                    <td>Bachelor of Science in Information and Technology</td>
+                    <td>TSEC</td>
+                    <td>2022 - Present</td>
+                    <td>Relevant coursework includes: Data Structures, Algorithms, and Web Design.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Interests</h2>
+        <ul class="interests-list">
+            <li>Web Development</li>
+            <li>Coding Challenges</li>
+            <li>Gadgets & Technology</li>
+            <li>Reading Tech Blogs</li>
+            <li>Gaming (Strategy Games)</li>
+            <li>Learning New Languages (Programming)</li>
+            <li>Open Source Contributions</li>
+            <li>Photography</li>
+        </ul>
+    </section>
+
+    <div class="marksheet-links-container">
+        <div class="marksheet-link">
+            <a href="marksheet_12th.html" target="_blank">View 12th Grade Marksheet</a>
+        </div>
+        <div class="marksheet-link">
+            <a href="marksheet_10th.html" target="_blank">View 10th Grade Marksheet</a>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+# 10_Marksheet
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10th Grade SSC Marksheet</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .marksheet-container {
+            max-width: 800px;
+            width: 100%;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .header {
+            background-color: #1e3a8a;
+            color: #ffffff;
+            padding: 24px 32px;
+            text-align: center;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        .details-section {
+            padding: 24px 32px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .details-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+        .details-item span:first-child {
+            font-weight: 600;
+            color: #4b5563;
+        }
+        .details-item span:last-child {
+            color: #1f2937;
+        }
+        .marks-table-section {
+            padding: 24px 32px;
+        }
+        .marks-table-section h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 16px;
+        }
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        th {
+            background-color: #eff6ff;
+            font-weight: 600;
+            color: #1e40af;
+            text-transform: uppercase;
+            font-size: 0.875rem;
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+        .marks-summary {
+            padding: 24px 32px;
+            background-color: #f9fafb;
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+        }
+        .marks-summary h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 16px;
+        }
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        .summary-item span:first-child {
+            font-weight: 600;
+            color: #374151;
+        }
+        .summary-item span:last-child {
+            font-weight: 700;
+            color: #1f2937;
+        }
+        .status-pass {
+            color: #065f46;
+            font-weight: 600;
+        }
+        .result {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.5rem;
+            font-weight: 800;
+            padding: 12px;
+            border-radius: 8px;
+            background-color: #d1fae5;
+            color: #065f46;
+        }
+        .result.fail {
+            background-color: #fee2e2;
+            color: #991b1b;
+        }
+        .note-text {
+            text-align: center;
+            font-size: 0.875rem;
+            color: #4b5563;
+            margin-top: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="marksheet-container">
+        <div class="header">
+            <h1>Secondary School Examination</h1>
+            <p>Class X - Academic Year 2019-2020</p>
+        </div>
+
+        <div class="details-section">
+            <div class="details-item">
+                <span>Student Name:</span>
+                <span>Pratham Asnani</span>
+            </div>
+            <div class="details-item">
+                <span>Roll Number:</span>
+                <span>17</span>
+            </div>
+            <div class="details-item">
+                <span>School Name:</span>
+                <span>St. Joseph High School</span>
+            </div>
+            <div class="details-item">
+                <span>Date of Issue:</span>
+                <span>July 14, 2020</span>
+            </div>
+        </div>
+
+        <div class="marks-table-section">
+            <h2>Subject-wise Marks</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Total Marks</th>
+                        <th>Passing Marks</th>
+                        <th>Marks Obtained</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>English</td>
+                        <td>100</td>
+                        <td>33</td>
+                        <td>85</td>
+                        <td class="status-pass">PASS</td>
+                    </tr>
+                    <tr>
+                        <td>Mathematics</td>
+                        <td>100</td>
+                        <td>33</td>
+                        <td>90</td>
+                        <td class="status-pass">PASS</td>
+                    </tr>
+                    <tr>
+                        <td>Science</td>
+                        <td>100</td>
+                        <td>33</td>
+                        <td>76</td>
+                        <td class="status-pass">PASS</td>
+                    </tr>
+                    <tr>
+                        <td>History</td>
+                        <td>100</td>
+                        <td>33</td>
+                        <td>78</td>
+                        <td class="status-pass">PASS</td>
+                    </tr>
+                    <tr>
+                        <td>Geography</td>
+                        <td>100</td>
+                        <td>33</td>
+                        <td>80</td>
+                        <td class="status-pass">PASS</td>
+                    </tr>
+                    <tr>
+                        <td>Hindi</td>
+                        <td>100</td>
+                        <td>33</td>
+                        <td>88</td>
+                        <td class="status-pass">PASS</td>
+                    </tr>
+                    <tr>
+                        <td>Marathi</td>
+                        <td>100</td>
+                        <td>33</td>
+                        <td>72</td>
+                        <td class="status-pass">PASS</td>
+                    </tr>
+                    <tr>
+                        <td>French</td>
+                        <td>100</td>
+                        <td>33</td>
+                        <td>83</td>
+                        <td class="status-pass">PASS</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="marks-summary">
+            <h2>Overall Result</h2>
+            <div class="summary-item">
+                <span>Total Marks:</span>
+                <span>800</span>
+            </div>
+            <div class="summary-item">
+                <span>Marks Obtained:</span>
+                <span>772</span>
+            </div>
+            <div class="summary-item">
+                <span>Percentage:</span>
+                <span>96.50%</span>
+            </div>
+            <div class="result">
+                RESULT: PASS
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+# 12_Marksheet
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12th Grade Marksheet</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Light gray background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            box-sizing: border-box; /* Ensure padding doesn't add to total width/height */
+        }
+        .marksheet-container {
+            max-width: 800px;
+            width: 100%;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .header {
+            background-color: #1e3a8a; /* Dark blue header */
+            color: #ffffff;
+            padding: 24px 32px;
+            text-align: center;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+        }
+        .header h1 {
+            font-size: 2.5rem; /* Equivalent to text-4xl */
+            font-weight: 700; /* Equivalent to font-bold */
+            margin-bottom: 8px; /* Equivalent to mb-2 */
+        }
+        .header p {
+            font-size: 1.1rem; /* Equivalent to text-lg */
+            opacity: 0.9;
+        }
+        .details-section {
+            padding: 24px 32px; /* Equivalent to p-6 px-8 */
+            border-bottom: 1px solid #e5e7eb; /* Light gray border */
+        }
+        .details-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px; /* Equivalent to mb-2.5 */
+            font-size: 1rem; /* Equivalent to text-base */
+        }
+        .details-item span:first-child {
+            font-weight: 600; /* Equivalent to font-semibold */
+            color: #4b5563; /* Equivalent to text-gray-700 */
+        }
+        .details-item span:last-child {
+            color: #1f2937; /* Equivalent to text-gray-900 */
+        }
+        .marks-table-section {
+            padding: 24px 32px; /* Equivalent to p-6 px-8 */
+        }
+        .marks-table-section h2 {
+            font-size: 2rem; /* Equivalent to text-2xl */
+            font-weight: 600; /* Equivalent to font-semibold */
+            color: #1f2937; /* Equivalent to text-gray-800 */
+            margin-bottom: 16px; /* Equivalent to mb-4 */
+        }
+        table {
+            width: 100%;
+            border-collapse: separate; /* For rounded corners on table */
+            border-spacing: 0;
+            border-radius: 8px; /* Equivalent to rounded-lg */
+            overflow: hidden; /* Ensures rounded corners are visible */
+        }
+        th, td {
+            padding: 12px 16px; /* Equivalent to py-3 px-4 */
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb; /* Equivalent to border-b border-gray-200 */
+        }
+        th {
+            background-color: #eff6ff; /* Light blue for table header, equivalent to bg-blue-50 */
+            font-weight: 600; /* Equivalent to font-semibold */
+            color: #1e40af; /* Darker blue for header text, equivalent to text-blue-800 */
+            text-transform: uppercase;
+            font-size: 0.875rem; /* Equivalent to text-sm */
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+        .marks-summary {
+            padding: 24px 32px; /* Equivalent to p-6 px-8 */
+            background-color: #f9fafb; /* Lighter gray for summary, equivalent to bg-gray-50 */
+            border-bottom-left-radius: 12px; /* Equivalent to rounded-b-xl */
+            border-bottom-right-radius: 12px; /* Equivalent to rounded-b-xl */
+        }
+        .marks-summary h2 {
+            font-size: 2rem; /* Equivalent to text-2xl */
+            font-weight: 600; /* Equivalent to font-semibold */
+            color: #1f2937; /* Equivalent to text-gray-800 */
+            margin-bottom: 16px; /* Equivalent to mb-4 */
+        }
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px; /* Equivalent to mb-2.5 */
+            font-size: 1.1rem; /* Equivalent to text-lg */
+        }
+        .summary-item span:first-child {
+            font-weight: 600; /* Equivalent to font-semibold */
+            color: #374151; /* Equivalent to text-gray-800 */
+        }
+        .summary-item span:last-child {
+            font-weight: 700; /* Equivalent to font-bold */
+            color: #1f2937; /* Equivalent to text-gray-900 */
+        }
+        .status-pass {
+            color: #065f46; /* Equivalent to text-green-600 */
+            font-weight: 600; /* Equivalent to font-semibold */
+        }
+        .result {
+            text-align: center;
+            margin-top: 20px; /* Equivalent to mt-5 */
+            font-size: 1.5rem; /* Equivalent to text-2xl */
+            font-weight: 800; /* Equivalent to font-extrabold */
+            padding: 12px; /* Equivalent to py-3 px-4 */
+            border-radius: 8px; /* Equivalent to rounded-lg */
+            background-color: #d1fae5; /* Light green for pass, equivalent to bg-green-100 */
+            color: #065f46; /* Dark green for pass text, equivalent to text-green-700 */
+        }
+        .result.fail {
+            background-color: #fee2e2; /* Light red for fail, equivalent to bg-red-100 */
+            color: #991b1b; /* Dark red for fail text, equivalent to text-red-700 */
+        }
+        .note-text {
+            text-align: center;
+            font-size: 0.875rem; /* Equivalent to text-sm */
+            color: #4b5563; /* Equivalent to text-gray-600 */
+            margin-top: 16px; /* Equivalent to mt-4 */
+        }
+    </style>
+</head>
+<body>
+    <div class="marksheet-container">
+        <div class="header">
+            <h1>Higher Secondary Examination</h1>
+            <p>Class XII - Academic Year 2021-2022</p>
+        </div>
+
+        <div class="details-section">
+            <div class="details-item">
+                <span>Student Name:</span>
+                <span>Pratham Asnani</span>
+            </div>
+            <div class="details-item">
+                <span>Roll Number:</span>
+                <span>08</span>
+            </div>
+            <div class="details-item">
+                <span>School Name:</span>
+                <span>Jai Hind</span>
+            </div>
+            <div class="details-item">
+                <span>Date of Issue:</span>
+                <span>July 14, 2022</span>
+            </div>
+        </div>
+
+        <div class="marks-table-section">
+            <h2>Subject-wise Marks</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Total Marks</th>
+                        <th>Passing Marks</th>
+                        <th>Marks Obtained</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Mathematics</td>
+                        <td>100</td>
+                        <td>33</td>
+                        <td>85</td>
+                        <td class="status-pass">PASS</td>
+                    </tr>
+                    <tr>
+                        <td>Physics</td>
+                        <td>100</td>
+                        <td>33</td>
+                        <td>78</td>
+                        <td class="status-pass">PASS</td>
+                    </tr>
+                    <tr>
+                        <td>Chemistry</td>
+                        <td>100</td>
+                        <td>33</td>
+                        <td>62</td>
+                        <td class="status-pass">PASS</td>
+                    </tr>
+                    <tr>
+                        <td>Computer Science (Optional)</td>
+                        <td>100</td>
+                        <td>33</td>
+                        <td>91</td>
+                        <td class="status-pass">PASS</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="marks-summary">
+            <h2>Overall Result</h2>
+            <div class="summary-item">
+                <span>Total Marks:</span>
+                <span>400</span>
+            </div>
+            <div class="summary-item">
+                <span>Marks Obtained:</span>
+                <span>316</span>
+            </div>
+            <div class="summary-item">
+                <span>Percentage:</span>
+                <span>79.00%</span>
+            </div>
+            <div class="result">
+                RESULT: PASS
+            </div>
+            <p class="note-text"></p>
+        </div>
+    </div>
+</body>
+</html>

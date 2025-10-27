@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML5 Form Validation</title>
+<style>
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background-color: #60b7ea;
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+margin: 0;
+color: #333;
+}
+form {
+background-color: #d0cece;
+max-width: 500px;
+width: 100%;
+margin: 20px;
+padding: 40px;
+border-radius: 12px;
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+box-sizing: border-box;
+}
+h2 {
+text-align: center;
+color: #2c92e5;
+margin-bottom: 30px;
+}
+label {
+display: block;
+margin-bottom: 8px;
+font-weight: 600;
+}
+input, button {
+display: block;
+width: 100%;
+padding: 12px;
+margin-bottom: 20px;
+border: 1px solid #dcdfe6;
+border-radius: 6px;
+box-sizing: border-box;
+transition: all 0.3s ease;
+font-size: 16px;
+}
+input:focus {
+border-color: #4a90e2;
+box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+outline: none;
+}
+button {
+background-color: #4a90e2;
+color: rgb(255, 255, 255);
+font-weight: bold;
+cursor: pointer;
+border: none;
+padding: 15px;
+margin-top: 10px;
+transition: background-color 0.3s ease;
+}
+button:hover {
+background-color: #357ABD;
+}
+.error-message {
+color: #ff0000;
+font-size: 0.9em;
+margin-top: -15px;
+margin-bottom: 15px;
+}
+</style>
+</head>
+<body>
+<form id="myForm" novalidate>
+<h2>Create an Account</h2>
+<label for="username">Username:</label>
+<input type="text" id="username" name="username" required minlength="3">
+<div class="error-message" id="username-error"></div>
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" required>
+<div class="error-message" id="email-error"></div>
+<label for="password">Password:</label>
+<input type="password" id="password" name="password" required
+pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+<div class="error-message" id="password-error"></div>
+<label for="age">Age:</label>
+<input type="number" id="age" name="age" min="18" max="99" required>
+<div class="error-message" id="age-error"></div>
+<button type="submit">Register</button>
+</form>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Employee Form Validation</title>
+</head>
+<body>
+  <h2>Employee Information Form</h2>
+
+  <form onsubmit="return validateEmployeeForm()">
+    Enroll No: <input type="text" id="enroll"><br><br>
+    Name: <input type="text" id="empName"><br><br>
+    Email: <input type="text" id="empEmail"><br><br>
+    Mobile: <input type="text" id="empMobile"><br><br>
+    Department: <input type="text" id="dept"><br><br>
+    Salary: <input type="number" id="salary"><br><br>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    function validateEmployeeForm() {
+      const enroll = document.getElementById("enroll").value.trim();
+      const name = document.getElementById("empName").value.trim();
+      const email = document.getElementById("empEmail").value.trim();
+      const mobile = document.getElementById("empMobile").value.trim();
+      const dept = document.getElementById("dept").value.trim();
+      const salary = document.getElementById("salary").value;
+
+      if (enroll === "" || name === "" || email === "" || mobile === "" || dept === "" || salary === "") {
+        alert("All fields are required!");
+        return false;
+      }
+
+      if (!/^\d+$/.test(enroll)) {
+        alert("Enroll Number must be numeric!");
+        return false;
+      }
+
+      if (!/^[A-Za-z ]+$/.test(name)) {
+        alert("Name must contain alphabets only!");
+        return false;
+      }
+
+      if (!/^\S+@\S+\.\S+$/.test(email)) {
+        alert("Invalid Email Format!");
+        return false;
+      }
+
+      if (!/^\d{10}$/.test(mobile)) {
+        alert("Mobile number must be 10 digits!");
+        return false;
+      }
+
+      if (salary <= 0) {
+        alert("Salary must be a positive number!");
+        return false;
+      }
+
+      alert("Employee Form Submitted Successfully!");
+      return true;
+    }
+  </script>
+</body>
+</html>

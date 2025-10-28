@@ -1,3 +1,4 @@
 npx create-react-app my-react-app
+npm create vite@latest demo2
 cd my-react-app
 npm run dev/start

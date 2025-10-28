@@ -2,3 +2,6 @@ npx create-react-app my-react-app
 npm create vite@latest demo2
 cd my-react-app
 npm run dev/start
+
+all in src
+create folder components in that counter.jsx
